@@ -96,6 +96,13 @@ export default {
           email: 'selena13@mail.com',
           address: 'Jl.Mataram',
         },
+        {
+          id: 4,
+          name: 'Mell',
+          nohp: '089998213828',
+          email: 'mell22@mail.com',
+          address: 'Jl.Linggarjati',
+        },
       ],
     }
   },
