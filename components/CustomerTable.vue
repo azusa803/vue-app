@@ -61,6 +61,8 @@
 
 
 <script>
+import swal from 'sweetalert';
+
   export default {
     name: 'customer-table',
     props: {
@@ -81,14 +83,17 @@
             let id = this.data.id
             this.$emit('edit-customer', id, customer)
             this.customerId = null
+            swal('Updated','Berhasil Update Data','warning')
         },
         cancelEdit(customer) {
             Object.assign(customer, this.data)
             this.customerId = null;
+            swal('Canceled','Update Data Canceled','warning')
         // console.log(this.customerId);
         },
         deleteCustomer(id){
-            this.$emit('delete-customer', id)  
+            this.$emit('delete-customer', id) 
+            swal('Deleted','The Data has been Deleted','warning') 
         }
     }
   }

@@ -25,6 +25,7 @@
   </template>
   
   <script>
+  import swal from 'sweetalert'
     export default {
       name: 'customer-form', 
       data(){
@@ -40,6 +41,7 @@
       methods: {
         submit() {
             this.$emit('add-customer', this.customer)
+            swal('Added','New Data has been Added','success')
             console.log('ok!')
         },
       },
